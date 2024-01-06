@@ -59,4 +59,45 @@
      ;; if you have to write return, your algorythm is bad
      ;; if you must write return, your language is bad
      (local.get $first))
+
+
+  ;;;;;;;;;;;;;;;;;;
+  ;; round things ;;
+  ;;;;;;;;;;;;;;;;;;
+
+  ;; value of pi, not that hard to come by ↓
+  (global $pi f32 (f32.const 3.141592653589793))
+
+  ;; rare case of english word pronounced without any vowels
+  (export "circumference" (func $circumference))
+  (func $circumference (param $r f32) (result f32)
+     (f32.mul (f32.mul (global.get $pi) (local.get $r)) (f32.const 2)))
+
+  (export "circleSurface" (func $circlesurface))
+  (func $circlesurface (param $r f32) (result f32)
+     ;; first I say I multiply a lot
+     (f32.mul (f32.mul
+        ;; then I say what I multiply a lot
+        (local.get $r) (local.get $r)) (global.get $pi)))
+
+  (export "sphereVolume" (func $sphereV))
+  (func $sphereV (param $r f32) (result f32)
+  ;; V = 4/3*π*r³
+     (f32.mul
+       (f32.mul
+         (f32.div (f32.const 4) (f32.const 3))
+         (global.get $pi))
+       
+       (call $f32pow (local.get $r) (i32.const 3))))
+
+  ;; power is builtin only for ints
+  ;; but I don't mind writing extra six lines of code
+  (func $f32pow (param $x f32) (param $y i32) (result f32)
+     (local $res f32) (local.set $res (f32.const 1))
+     (loop $L (local.get $y) (if (then
+         (local.set $res (f32.mul (local.get $res) (local.get $x)))
+         (local.set $y (i32.sub (local.get $y) (i32.const 1)))
+         (br $L)))) (local.get $res))
+  ;; definitly six lines of code ↑, no bullshit here
+
 )
