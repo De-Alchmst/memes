@@ -16,9 +16,9 @@ def fibonacci(n: int) -> int:
             
             # imagine using for in loop
             for _ in range(index-1):
-                a, b = b, a + b
-
-            return a
+                a, b = b, a + b                     # this would look much
+                                                    # better with S-expressions
+            return a                                # <==
 
 
         def __len__(self):
@@ -61,4 +61,15 @@ def circleSurface(r):
     return math.pi * r**2
 
 def sphereVolume(r):
-    return (4/3) * math.pi * r**3
+    return \
+        (       # the
+        4       # IBM
+        /       # case
+        3       # https://en.wikipedia.org/wiki/Source_lines_of_code
+        ) \
+        * \
+        math.pi \
+        * \
+        r \
+        ** \
+        3
