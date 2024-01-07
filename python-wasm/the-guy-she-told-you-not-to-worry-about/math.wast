@@ -5,27 +5,27 @@
   ;;;;;;;
 
   (export "factorial" (func $factorial))
-  (func $factorial (param $n i32) (result i32)
+  (func $factorial (param $n i64) (result i64)
 
-     (local $outcome i32)
+     (local $outcome i64)
 
      ;; default value
-     (local.set $outcome (i32.const 1))
+     (local.set $outcome (i64.const 1))
 
      ;; if more than one
-     (i32.ge_s (local.get $n) (i32.const 1))
+     (i64.ge_s (local.get $n) (i64.const 1))
      (if
        (then
          (local.set $outcome (local.get $n))
          (loop $L
            ;; way more obvious than n--
-           (local.set $n (i32.sub (local.get $n) (i32.const 1)))
+           (local.set $n (i64.sub (local.get $n) (i64.const 1)))
 
-           ;; end once i32.eqz (local.get $n)
-           (i32.ne (local.get $n) (i32.const 0))
+           ;; end once i64.eqz (local.get $n)
+           (i64.ne (local.get $n) (i64.const 0))
            (if
              (then
-               (local.set $outcome (i32.mul (local.get $outcome) (local.get $n)))
+               (local.set $outcome (i64.mul (local.get $outcome) (local.get $n)))
                (br $L))))))
        
 
@@ -37,23 +37,23 @@
   ;;;;;;;;;;;;;;;;
 
   (export "fibonacci" (func $fibonacci))
-  (func $fibonacci (param $n i32) (result i32)
-     (local $first i32)
-     (local $second i32)
+  (func $fibonacci (param $n i64) (result i64)
+     (local $first i64)
+     (local $second i64)
 
-     (local.set $first (i32.const 0))
-     (local.set $second (i32.const 1))
+     (local.set $first (i64.const 0))
+     (local.set $second (i64.const 1))
 
      (loop $L ;; imagine needing for loop
-       (i32.gt_s (local.get $n) (i32.const 1))
+       (i64.gt_s (local.get $n) (i64.const 1))
        (if
          (then
            ;; imagine having to make temporary variable for this
            (local.get $first)
            (local.set $first (local.get $second))
-           (local.set $second (i32.add (local.get $second)))
+           (local.set $second (i64.add (local.get $second)))
 
-           (local.set $n (i32.sub (local.get $n) (i32.const 1)))
+           (local.set $n (i64.sub (local.get $n) (i64.const 1)))
            (br $L))))
 
      ;; if you have to write return, your algorythm is bad

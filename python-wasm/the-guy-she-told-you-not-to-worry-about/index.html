@@ -9,10 +9,39 @@
 		<!-- load da wasm -->
 	<body onload="getWASM()">
 
+      <!-- interface -->
+      <form id="factorial">
+         <input id="fact-number" class="numba" type="number">
+         <input id="fact-submit" type="submit" value="!">
+         <br> <label id="fact-result">result:</label>
+      </form>
+
+      <form id="fibonacci">
+         <input id="fib-number" class="numba" type="number">
+         <input id="fib-submit" type="submit" value="fibonači">
+         <br> <label id="fib-result">result:</label>
+      </form>
+
+      <form id="circumference">
+         <input id="circumference-number" class="numba" type="number">
+         <input id="circumference-submit" type="submit" value="circumberferance">
+         <br> <label id="circumference-result">result:</label>
+      </form>
+
+      <form id="circleSurface">
+         <input id="circleSurface-number" class="numba" type="number">
+         <input id="circleSurface-submit" type="submit" value="surface of a circle">
+         <br> <label id="circleSurface-result">result:</label>
+      </form>
+
+      <form id="sphereVolume">
+         <input id="sphereVolume-number" class="numba" type="number">
+         <input id="sphereVolume-submit" type="submit" value="volume of a sphere">
+         <br> <label id="sphereVolume-result">result:</label>
+      </form>
+
 		<!-- load da JS -->
 		<script src="index.js"></script>
-
-		<p onclick="test()">test</p>
 
 	</body>
 </html>
