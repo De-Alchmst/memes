@@ -113,3 +113,110 @@ form {
    top: 930px;
    left: 0px;
 }
+
+#fire {
+   position: absolute;
+   left: 905px;
+   top: 887px;
+}
+
+#cross1 {
+   position: absolute;
+   left: 1050px;
+   top: 400px;
+}
+
+#cross2 {
+   position: absolute;
+   left: 1300px;
+   top: 200px;
+}
+
+#cross3 {
+   position: absolute;
+   left: 1450px;
+   top: 400px;
+}
+
+#geometry {
+   position: absolute;
+   left: 900px;
+   top: 150px;
+}
+
+#hot-dog {
+   position: absolute;
+   left: 490px;
+   top: 380px;
+}
+
+#js-now {
+   position: absolute;
+   left: 800px;
+   top: 800px;
+}
+
+#landchad {
+   position: absolute;
+   left: 30px;
+   top: 20px;
+}
+
+#linux {
+   position: absolute;
+   left: 100px;
+   top: 750px;
+}
+
+#mongolia {
+   position: absolute;
+   left: 100px;
+   top: 800px;
+}
+
+#IE {
+   position: absolute;
+   left: 100px;
+   top: 700px;
+}
+
+#doom {
+   position: absolute;
+   left: 100px;
+   top: 650px;
+}
+
+#haiku {
+   position: absolute;
+   left: 100px;
+   top: 850px;
+}
+
+#homocide {
+   position: absolute;
+   left: 100px;
+   top: 600px;
+}
+
+#vim {
+   position: absolute;
+   left: 700px;
+   top: 550px;
+}
+
+#glitter {
+   position: absolute;
+   left: 137px;
+   top: 137px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+#superior {
+   position: absolute;
+   left: 10px;
+   top: 200px;
+   font-family: "Baloo Bhaina", cursive;
+   font-size: 55px;
+   color: rgb(234, 220, 72);
+   text-shadow: rgba(216, 255, 153, 0.75) 0px 0px 0px, rgba(139, 255, 128, 0.71) 14.3px 14.3px 1.8px, rgba(104, 255, 171, 0.68) 28.6px 28.6px 3.5px, rgba(79, 255, 251, 0.64) 42.9px 42.9px 5.3px, rgba(54, 153, 255, 0.61) 57.1px 57.1px 7px, rgba(38, 29, 255, 0.57) 71.4px 71.4px 8.8px, rgba(147, 5, 255, 0.54) 85.7px 85.7px 10.5px, rgba(235, 0, 211, 0.5) 100px 100px 12.3px;
+}
