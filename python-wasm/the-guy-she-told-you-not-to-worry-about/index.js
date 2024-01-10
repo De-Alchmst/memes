@@ -27,6 +27,7 @@ const circumference = document.getElementById("circumference");
 const circumferenceNum = document.getElementById("circumference-number");
 const circumferenceResult = document.getElementById("circumference-result");
 
+// there's a lot of them
 const circleSurface = document.getElementById("circleSurface");
 const circleSurfaceNum = document.getElementById("circleSurface-number");
 const circleSurfaceResult = document.getElementById("circleSurface-result");
@@ -48,7 +49,7 @@ fib.addEventListener("submit", function(event){
 
 circumference.addEventListener("submit", function(event){
    event.preventDefault();
-   circumferenceResult.innerText = "result: " + wasm.circumference(Number(circumferenceNum.value)).toFixed(4);
+   circumferenceResult.innerText = "result: " + wasm.circumference(Number(circumferenceNum.value)).toFixed(4); // my number is too good
 })
 
 circleSurface.addEventListener("submit", function(event){

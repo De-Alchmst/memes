@@ -12,6 +12,7 @@
 
      ;; if more than one
      (i64.ge_s (local.get $n) (i64.const 1))
+     ;; superior lisp indentation
      (if (then
          (local.set $outcome (local.get $n))
          (loop $L
@@ -106,6 +107,6 @@
          (local.set $res (f32.mul (local.get $res) (local.get $x)))
          (local.set $y (i32.sub (local.get $y) (i32.const 1)))
          (br $L)))) (local.get $res))
-  ;; definitly six lines of code ↑, no bullshit here
+  ;; definitely six lines of code ↑, no bullshit here
 
-)
+) ;; <<-- most outer block can end like this

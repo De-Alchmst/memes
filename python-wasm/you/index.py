@@ -1,7 +1,7 @@
 import argparse
 
 # math.py is already taken
-# this is more accurate anyvays
+# this is more accurate anyways
 from meth import *
 
 ###################
@@ -72,3 +72,5 @@ elif args.circle_surface:
 
 elif args.sphere_volume:
     print(round(sphereVolume(args.number), 4))
+
+# who would even pay for something like this?
