@@ -15,7 +15,7 @@ def fibonacci(n: int) -> int:
             b = 1
             
             # imagine using for in loop
-            for _ in range(index-1):
+            for _ in range(index):
                 a, b = b, a + b                     # this would look much
                                                     # better with S-expressions
             return a                                # <==
@@ -29,7 +29,7 @@ def fibonacci(n: int) -> int:
 
     fib = fibonacci()
     
-    return fib[n]
+    return fib[n-1]
     # imagine using return
 
 ########

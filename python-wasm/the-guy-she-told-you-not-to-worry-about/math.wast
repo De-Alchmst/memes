@@ -3,7 +3,7 @@
   ;;;;;;;
   ;; ! ;;
   ;;;;;;;
-  (func $factoriali (export "factorial") (param $n i64) (result i64)
+  (func $factorial (export "factorial") (param $n i64) (result i64)
 
      (local $outcome i64)
 
